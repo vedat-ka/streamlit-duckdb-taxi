@@ -11,7 +11,6 @@ Verarbeitung direkt auf Parquet-Dateien mit **DuckDB**, Visualisierung mit **Plo
 streamlit-duckbd-taxi/
 ├── app.py                   # Streamlit-Hauptanwendung
 ├── requirements.txt         # Python-Abhängigkeiten
-├── taxi_zone_lookup.csv     # NYC Taxi Zonen (LocationID → Zone/Borough)
 ├── .gitignore
 ├── README.md
 ├── db/                      # Datenbankpaket
