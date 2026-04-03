@@ -9,11 +9,20 @@ Verarbeitung direkt auf Parquet-Dateien mit **DuckDB**, Visualisierung mit **Plo
 
 ```
 streamlit-duckbd-taxi/
-├── app.py                          # Streamlit-Hauptanwendung
-├── requirements.txt                # Python-Abhängigkeiten
-├── yellow_tripdata_2026-01.parquet # Yellow Taxi Fahrtdaten (~3,7 Mio Fahrten)
-├── green_tripdata_2026-01.parquet  # Green Taxi Fahrtdaten (~40 Tsd Fahrten)
-└── taxi_zone_lookup.csv            # NYC Taxi Zonen (LocationID → Zone/Borough)
+├── app.py                   # Streamlit-Hauptanwendung
+├── requirements.txt         # Python-Abhängigkeiten
+├── taxi_zone_lookup.csv     # NYC Taxi Zonen (LocationID → Zone/Borough)
+├── .gitignore
+├── README.md
+├── db/                      # Datenbankpaket
+│   ├── __init__.py
+│   ├── connection.py        # DuckDB-Verbindung & Views
+│   ├── queries.py           # SQL-Abfragen
+│   └── sources.py           # FROM-Klausel & WHERE-Filter
+└── data/                    # Parquet-Dateien (nicht im Repo, s. .gitignore)
+    ├── yellow_tripdata_YYYY-MM.parquet
+    ├── green_tripdata_YYYY-MM.parquet
+    └── .gitkeep
 ```
 
 ---
