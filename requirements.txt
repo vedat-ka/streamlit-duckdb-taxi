@@ -1,0 +1,16 @@
+duckdb==1.5.1
+streamlit==1.56.0
+plotly==6.6.0
+pandas==2.3.3
+pyarrow==23.0.1
+numpy==2.2.6
+altair==6.0.0
+narwhals==2.18.1
+pydeck==0.9.1
+pillow==12.2.0
+requests==2.33.1
+watchdog==6.0.0
+protobuf==7.34.1
+tenacity==9.1.4
+cachetools==7.0.5
+blinker==1.9.0
