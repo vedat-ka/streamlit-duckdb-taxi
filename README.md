@@ -8,12 +8,19 @@ Verarbeitung direkt auf Parquet-Dateien mit **DuckDB**, Visualisierung mit **Plo
 ## Projektstruktur
 
 ```
-streamlit-duckbd-taxi/
+streamlit-duckdb-taxi/
+├── .streamlit/
+│   └── config.toml                 # Streamlit-Konfiguration (Theme, Layout)
+├── data/
+│   ├── yellow_tripdata_2026-01.parquet  # Yellow Taxi Fahrtdaten (~3,7 Mio Fahrten)
+│   └── green_tripdata_2026-01.parquet   # Green Taxi Fahrtdaten (~40 Tsd Fahrten)
+├── db/
+│   ├── __init__.py                 # Package-Initialisierung
+│   ├── connection.py               # DuckDB-Verbindungsverwaltung
+│   ├── queries.py                  # SQL-Abfragen für das Dashboard
+│   └── sources.py                  # Erkennung & Registrierung der Parquet-Dateien
 ├── app.py                          # Streamlit-Hauptanwendung
-├── requirements.txt                # Python-Abhängigkeiten
-├── yellow_tripdata_2026-01.parquet # Yellow Taxi Fahrtdaten (~3,7 Mio Fahrten)
-├── green_tripdata_2026-01.parquet  # Green Taxi Fahrtdaten (~40 Tsd Fahrten)
-└── taxi_zone_lookup.csv            # NYC Taxi Zonen (LocationID → Zone/Borough)
+└── requirements.txt                # Python-Abhängigkeiten
 ```
 
 ---
@@ -29,7 +36,7 @@ streamlit-duckbd-taxi/
 
 ```bash
 # 1. Ins Projektverzeichnis wechseln
-cd streamlit-duckbd-taxi
+cd streamlit-duckdb-taxi
 
 # 2. Virtuelle Umgebung erstellen
 python3 -m venv .venv
